@@ -12,9 +12,12 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <title>ARAPIS</title>
           <meta name="description" content="Somos una organizacion guatemalteca de productores de miel 100% organica y sus productos derivados. "/>
-        
+          <meta name="keywords" content="miel en guatemala, miel pura, venta de miel, miel guatemalteca, miel, arapis, apicultura, guatemala"/>  
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+          <link rel="manifest" href="/site.webmanifest"/>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

@@ -48,7 +48,7 @@ const Navbar = () => {
     setOpenAssociation(true);
     handleOpenNav(event.currentTarget);
   }
-  const handleCloseNav = (event: React.MouseEvent<HTMLLIElement>) => {
+  const handleCloseNav = () => {
     setOpenAbout(false);
     setOpenOurHoney(false);
     setOpenAssociation(false);
@@ -101,13 +101,25 @@ const Navbar = () => {
                   </ListItemButton>
                   <Collapse in={openAbout} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={
+                        () => {
+                        router.push('/about', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Nuestra Historia" />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={
+                        () => {
+                        router.push('/about', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Junta Directiva" />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }}  onClick={
+                        () => {
+                        router.push('/about', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Nuestros Socios" />
                       </ListItemButton>
                     </List>
@@ -135,13 +147,25 @@ const Navbar = () => {
                   </ListItemButton>
                   <Collapse in={openAssociation} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={
+                        () => {
+                        router.push('/asociation', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Mision y Vision" />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={
+                        () => {
+                        router.push('/asociation', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Hazte Socio" />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={
+                        () => {
+                        router.push('/asociation', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary="Proyectos" />
                       </ListItemButton>
                     </List>
@@ -156,14 +180,14 @@ const Navbar = () => {
               </Box>
             </Drawer>
           </Box>
-          {<img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="64" />}
+          {<img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="72" />}
           <Box sx={{ flexGrow: 1, paddingLeft: 4, display: { xs: 'none', md: 'flex' } }}>
             <Button
               onClick={handleAboutNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
             >
               Quienes Somos
-            </Button> 
+            </Button>
             <Button
               onClick={handleHoneyNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
@@ -185,10 +209,10 @@ const Navbar = () => {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => { 
+              <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => {
                 router.push('/about', undefined, { shallow: true });
-                handleCloseNav(event); 
-              } }>Nuestra Historia</MenuItem>
+                handleCloseNav();
+              }}>Nuestra Historia</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>Junta Directiva</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>Nuestros Socios</MenuItem>
             </Menu>
@@ -214,10 +238,10 @@ const Navbar = () => {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => { 
+              <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => {
                 router.push('/asociation', undefined, { shallow: true });
-                handleCloseNav(event); 
-              } }>Mision y Vision</MenuItem>
+                handleCloseNav();
+              }}>Mision y Vision</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>Hazte Socio</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>Proyectos</MenuItem>
             </Menu>

@@ -11,6 +11,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import TagManager from 'react-gtm-module';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -21,12 +22,17 @@ interface MyAppProps extends AppProps {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  React.useEffect(() => {
+    TagManager.initialize({ gtmId: 'G-PXXSTBQ45Q' });
+}, []);
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-          <title>ARAPIS</title>
-          <meta name="description" content="Somos una organizacion guatemalteca de productores de miel 100% organica y sus productos derivados. "/>
+        <title>ARAPIS</title>
+        <meta name="description" content="Somos una organizacion guatemalteca de productores de miel 100% organica y sus productos derivados. " />
+        <meta name="keywords" content="miel en guatemala, miel pura, venta de miel, miel guatemalteca, miel, arapis, apicultura, guatemala"/>  
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
