@@ -17,6 +17,8 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "next": "latest",
+    "next-i18next": "^12.1.0",
+    "next-language-detector": "^1.0.2",
     "react": "latest",
     "react-dom": "latest",
     "react-gtm-module": "^2.0.11"

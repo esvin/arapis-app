@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import type { NextPage } from 'next';
+import { appWithTranslation } from 'next-i18next'
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
@@ -20,7 +21,7 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-export default function MyApp(props: MyAppProps) {
+const MyApp = (props: MyAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   React.useEffect(() => {
     TagManager.initialize({ gtmId: 'G-PXXSTBQ45Q' });
@@ -32,7 +33,6 @@ export default function MyApp(props: MyAppProps) {
         <meta name="description" content="Somos una organizacion guatemalteca de productores de miel 100% organica y sus productos derivados. " />
         <meta name="keywords" content="miel en guatemala, miel pura, venta de miel, miel guatemalteca, miel, arapis, apicultura, guatemala"/>  
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -61,3 +61,4 @@ export default function MyApp(props: MyAppProps) {
     </CacheProvider>
   );
 }
+export default appWithTranslation(MyApp)

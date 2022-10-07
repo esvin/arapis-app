@@ -14,7 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import LanSwitchLink from '../src/LanSwitchLink';
+import i18nextConfig from '../next-i18next.config';
 import * as React from 'react';
 
 const pages = [
@@ -27,13 +29,14 @@ const pages = [
 ];
 
 const Navbar = () => {
+  const router = useRouter();
+  const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
   const [openAbout, setOpenAbout] = React.useState(false);
   const [openOurHoney, setOpenOurHoney] = React.useState(false);
   const [openAssociation, setOpenAssociation] = React.useState(false);
 
   const [anchorElMenu, setAnchorElMenu] = React.useState<null | HTMLElement>(null);
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const router = useRouter();
 
   const handleAboutNav = (event: React.MouseEvent<HTMLButtonElement>) => {
     setOpenAbout(true);
@@ -103,23 +106,23 @@ const Navbar = () => {
                     <List component="div" disablePadding>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/about', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/about', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Nuestra Historia" />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/about', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/about', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Junta Directiva" />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}  onClick={
+                      <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/about', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/about', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Nuestros Socios" />
                       </ListItemButton>
                     </List>
@@ -149,23 +152,23 @@ const Navbar = () => {
                     <List component="div" disablePadding>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/asociation', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/asociation', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Mision y Vision" />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/asociation', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/asociation', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Hazte Socio" />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
-                        router.push('/asociation', undefined, { shallow: true });
-                        handleCloseMenu();
-                      }}>
+                          router.push('/asociation', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary="Proyectos" />
                       </ListItemButton>
                     </List>
@@ -200,6 +203,15 @@ const Navbar = () => {
             >
               Asociación
             </Button>
+            {i18nextConfig.i18n.locales.map((locale) => {
+              if (locale === currentLocale) return null
+              return (
+                <LanSwitchLink
+                  locale={locale}
+                  key={locale}
+                />
+              )
+            })}
             <Menu
               id="ourHoneyMenu"
               anchorEl={anchorElNav}
