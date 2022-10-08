@@ -19,20 +19,13 @@ import { useRouter } from 'next/router';
 import LanSwitchLink from '../src/LanSwitchLink';
 import i18nextConfig from '../next-i18next.config';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getStaticPaths, makeStaticProps } from '../lib/getStatic';
 
-const pages = [
-  { id: 'startSection', name: 'Inicio' },
-  { id: 'aboutUsSection', name: 'Quienes somos' },
-  { id: 'ourHoneySection', name: 'Nuestra Miel' },
-  { id: 'associationSection', name: 'Asociación' },
-  { id: 'blogSection', name: 'Noticias' },
-  { id: 'contact', name: 'Contacto' },
-];
 
 const Navbar = () => {
   const router = useRouter();
-  const { t } = useTranslation(['common', 'footer']);
+  const { t } = useTranslation('common');
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
   const [openAbout, setOpenAbout] = React.useState(false);
   const [openOurHoney, setOpenOurHoney] = React.useState(false);
@@ -136,13 +129,22 @@ const Navbar = () => {
                   </ListItemButton>
                   <Collapse in={openOurHoney} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={() => {
+                          router.push('/product', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary={t('productsNav')} />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={() => {
+                          router.push('/product', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary={t('servicesNav')} />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}>
+                      <ListItemButton sx={{ pl: 4 }}  onClick={() => {
+                          router.push('/product', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                         <ListItemText primary={t('qualityNav')} />
                       </ListItemButton>
                     </List>
@@ -176,10 +178,16 @@ const Navbar = () => {
                       </ListItemButton>
                     </List>
                   </Collapse>
-                  <ListItemButton>
+                  <ListItemButton sx={{ pl: 4 }} onClick={() => {
+                          router.push('/blog', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                     <ListItemText primary={t('newsNav')} />
                   </ListItemButton>
-                  <ListItemButton>
+                  <ListItemButton sx={{ pl: 4 }} onClick={() => {
+                          router.push('/contact', undefined, { shallow: true });
+                          handleCloseMenu();
+                        }}>
                     <ListItemText primary={t('contactUsNav')} />
                   </ListItemButton>
                 </List>
@@ -208,11 +216,19 @@ const Navbar = () => {
             </Button>
             <Button
               sx={{ my: 2, color: '#000000', display: 'block' }}
+              onClick={() => {
+                router.push('/blog', undefined, { shallow: true });
+                handleCloseMenu();
+              }}
             >
             {t('newsNav')}
             </Button>
             <Button
               sx={{ my: 2, color: '#000000', display: 'block' }}
+              onClick={() => {
+                router.push('/contact', undefined, { shallow: true });
+                handleCloseMenu();
+              }}
             >
             {t('contactUsNav')}
             </Button>
@@ -250,7 +266,10 @@ const Navbar = () => {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={() => handleCloseNav}>{t('productsNav')}</MenuItem>
+              <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => {
+                router.push('/product', undefined, { shallow: true });
+                handleCloseNav();
+              }}>{t('productsNav')}</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>{t('servicesNav')}</MenuItem>
               <MenuItem onClick={() => handleCloseNav}>{t('qualityNav')}</MenuItem>
             </Menu>

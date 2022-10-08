@@ -6,8 +6,12 @@ import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import { useTranslation } from 'next-i18next';
+import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
 
 const About: NextPage = () => {
+  const { t } = useTranslation('common');
+
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -28,7 +32,7 @@ const About: NextPage = () => {
       }}
     >
       <Typography variant="h4" component="h1" gutterBottom>
-        Misión y Visión
+        {t('mAndVNav')}
       </Typography>
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
@@ -199,5 +203,8 @@ const About: NextPage = () => {
 
   );
 };
+
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
 
 export default About;

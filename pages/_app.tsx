@@ -12,6 +12,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import { getStaticPaths, makeStaticProps } from '../lib/getStatic';
 import TagManager from 'react-gtm-module';
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -61,4 +62,4 @@ const MyApp = (props: MyAppProps) => {
     </CacheProvider>
   );
 }
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp);

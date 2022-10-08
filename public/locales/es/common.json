@@ -10,10 +10,13 @@
   "servicesNav": "Servicios",
   "qualityNav": "Calidad",
   "asociationNav": "Asociacion",
-  "mAndVNav": "Mision and Vision",
+  "mAndVNav": "Misión and Visión",
   "joinUsNav": "Hazte Socio",
   "projectsNav": "Proyectos",
   "newsNav": "Noticias",
-  "contactUsNav": "Contacto"
+  "contactUsNav": "Contacto",
+  "ourStoryTitle": "Nuestra Histora",
+  "servicesTitle": "Nuestros Servicios",
+  "servicesSubtitle": "En ARAPIS ayudamos a nuestros asociados y clientes a maximizar su producción apicola a traves de la transferencia de conocimiento y el apoyo técnico. Brindando las herramientas y los procesos de mejora para la producción y comercialización de productos de calidad y a un mejor precio."
 
 }

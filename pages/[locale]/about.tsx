@@ -6,8 +6,12 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useTranslation } from 'next-i18next';
+import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
 
 const About: NextPage = () => {
+
+  const { t } = useTranslation('common');
   return (
     <Box
       sx={{
@@ -19,7 +23,7 @@ const About: NextPage = () => {
       }}
     >
       <Typography variant="h4" component="h1" gutterBottom>
-        Nuestra Historia
+        {t('ourStoryTitle')}
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
         ARAPIS nació de la necesidad de los pequeños apicultores del Suroccidente por buscar mercados para obtener mejores precios en la venta de miel.
@@ -200,5 +204,8 @@ const About: NextPage = () => {
     </Box>
   );
 };
+
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
 
 export default About;

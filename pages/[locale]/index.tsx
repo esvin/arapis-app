@@ -5,7 +5,7 @@ import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
 import styles from './index.module.css';
 
 const Home: NextPage = () => {
-  const { t } = useTranslation(['common', 'footer']);
+  const { t } = useTranslation('common');
   return (
     <Box
       sx={{
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
+export default Home;
 
-const getStaticProps = makeStaticProps(['common', 'footer'])
-export { getStaticPaths, getStaticProps }
