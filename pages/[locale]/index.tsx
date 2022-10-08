@@ -15,7 +15,6 @@ const Home: NextPage = () => {
         alignItems: 'center',
       }}
     >
-
       <Box maxWidth="lg">
         <ul id="hexGrid">
           <li className={styles.hex}>

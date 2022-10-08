@@ -1,4 +1,19 @@
 {
 
-  "title": "Titulo"
+  "title": "Titulo",
+  "aboutUsNav": "Quienes Somos",
+  "ourStoryNav": "Nuestra Historia",
+  "boardOfDirectorsNav": "Junta Directiva",
+  "ourAssocNav": "Nuestros Socios",
+  "ourHoneyNav": "Nuestra Miel",
+  "productsNav": "Productos",
+  "servicesNav": "Servicios",
+  "qualityNav": "Calidad",
+  "asociationNav": "Asociacion",
+  "mAndVNav": "Mision and Vision",
+  "joinUsNav": "Hazte Socio",
+  "projectsNav": "Proyectos",
+  "newsNav": "Noticias",
+  "contactUsNav": "Contacto"
+
 }

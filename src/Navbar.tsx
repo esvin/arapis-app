@@ -1,3 +1,4 @@
+import * as React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Drawer from '@mui/material/Drawer';
@@ -17,7 +18,8 @@ import ListItemText from '@mui/material/ListItemText';
 import { useRouter } from 'next/router';
 import LanSwitchLink from '../src/LanSwitchLink';
 import i18nextConfig from '../next-i18next.config';
-import * as React from 'react';
+import { useTranslation } from 'next-i18next';
+import { getStaticPaths, makeStaticProps } from '../lib/getStatic';
 
 const pages = [
   { id: 'startSection', name: 'Inicio' },
@@ -30,6 +32,7 @@ const pages = [
 
 const Navbar = () => {
   const router = useRouter();
+  const { t } = useTranslation(['common', 'footer']);
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
   const [openAbout, setOpenAbout] = React.useState(false);
   const [openOurHoney, setOpenOurHoney] = React.useState(false);
@@ -96,10 +99,10 @@ const Navbar = () => {
               >
                 <List>
                   <ListItemButton>
-                    <ListItemText primary="Inicio" />
+                    <img src="/logogrande.png" height="65" alt="" />
                   </ListItemButton>
                   <ListItemButton onClick={() => setOpenAbout(!openAbout)}>
-                    <ListItemText primary="Quienes somos" />
+                    <ListItemText primary={t('aboutUsNav')}/>
                     {openAbout ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
                   <Collapse in={openAbout} timeout="auto" unmountOnExit>
@@ -109,43 +112,43 @@ const Navbar = () => {
                           router.push('/about', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Nuestra Historia" />
+                        <ListItemText primary={t('ourStoryNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
                           router.push('/about', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Junta Directiva" />
+                        <ListItemText primary={t('boardOfDirectorsNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
                           router.push('/about', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Nuestros Socios" />
+                        <ListItemText primary={t('ourAssocNav')} />
                       </ListItemButton>
                     </List>
                   </Collapse>
                   <ListItemButton onClick={() => setOpenOurHoney(!openOurHoney)}>
-                    <ListItemText primary="Nuestra Miel" />
+                    <ListItemText primary={t('ourHoneyNav')} />
                     {openOurHoney ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
                   <Collapse in={openOurHoney} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                       <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemText primary="Productos" />
+                        <ListItemText primary={t('productsNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemText primary="Servicios" />
+                        <ListItemText primary={t('servicesNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemText primary="Calidad" />
+                        <ListItemText primary={t('qualityNav')} />
                       </ListItemButton>
                     </List>
                   </Collapse>
                   <ListItemButton onClick={() => setOpenAssociation(!openAssociation)}>
-                    <ListItemText primary="Asociación" />
+                    <ListItemText primary={t('asociationNav')} />
                     {openAssociation ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
                   <Collapse in={openAssociation} timeout="auto" unmountOnExit>
@@ -155,29 +158,29 @@ const Navbar = () => {
                           router.push('/asociation', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Mision y Vision" />
+                        <ListItemText primary={t('mAndVNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
                           router.push('/asociation', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Hazte Socio" />
+                        <ListItemText primary={t('joinUsNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={
                         () => {
                           router.push('/asociation', undefined, { shallow: true });
                           handleCloseMenu();
                         }}>
-                        <ListItemText primary="Proyectos" />
+                        <ListItemText primary={t('projectsNav')} />
                       </ListItemButton>
                     </List>
                   </Collapse>
                   <ListItemButton>
-                    <ListItemText primary="Noticias" />
+                    <ListItemText primary={t('newsNav')} />
                   </ListItemButton>
                   <ListItemButton>
-                    <ListItemText primary="Contacto" />
+                    <ListItemText primary={t('contactUsNav')} />
                   </ListItemButton>
                 </List>
               </Box>
@@ -189,19 +192,29 @@ const Navbar = () => {
               onClick={handleAboutNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
             >
-              Quienes Somos
+              {t('aboutUsNav')}
             </Button>
             <Button
               onClick={handleHoneyNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
             >
-              Nuestra Miel
+              {t('ourHoneyNav')}
             </Button>
             <Button
               onClick={handleAssociationNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
             >
-              Asociación
+            {t('asociationNav')}
+            </Button>
+            <Button
+              sx={{ my: 2, color: '#000000', display: 'block' }}
+            >
+            {t('newsNav')}
+            </Button>
+            <Button
+              sx={{ my: 2, color: '#000000', display: 'block' }}
+            >
+            {t('contactUsNav')}
             </Button>
             {i18nextConfig.i18n.locales.map((locale) => {
               if (locale === currentLocale) return null
@@ -224,9 +237,9 @@ const Navbar = () => {
               <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => {
                 router.push('/about', undefined, { shallow: true });
                 handleCloseNav();
-              }}>Nuestra Historia</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Junta Directiva</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Nuestros Socios</MenuItem>
+              }}>{t('ourStoryNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('boardOfDirectorsNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('ourAssocNav')}</MenuItem>
             </Menu>
             <Menu
               id="aboutUsMenu"
@@ -237,9 +250,9 @@ const Navbar = () => {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={() => handleCloseNav}>Productos</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Servicios</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Calidad</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('productsNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('servicesNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('qualityNav')}</MenuItem>
             </Menu>
             <Menu
               id="associationMenu"
@@ -253,9 +266,9 @@ const Navbar = () => {
               <MenuItem onClick={(event: React.MouseEvent<HTMLLIElement>) => {
                 router.push('/asociation', undefined, { shallow: true });
                 handleCloseNav();
-              }}>Mision y Vision</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Hazte Socio</MenuItem>
-              <MenuItem onClick={() => handleCloseNav}>Proyectos</MenuItem>
+              }}>{t('mAndVNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('joinUsNav')}</MenuItem>
+              <MenuItem onClick={() => handleCloseNav}>{t('projectsNav')}</MenuItem>
             </Menu>
           </Box>
         </Toolbar>

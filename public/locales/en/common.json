@@ -1,3 +1,17 @@
 {
-  "title": "Some Title"
+  "title": "Some Title",
+  "aboutUsNav": "About Us",
+  "ourStoryNav": "Our Story",
+  "boardOfDirectorsNav": "Board of Directors",
+  "ourAssocNav": "Our Associates",
+  "ourHoneyNav": "Our Honey",
+  "productsNav": "Products",
+  "servicesNav": "Services",
+  "qualityNav": "Quality",
+  "asociationNav": "Asociation",
+  "mAndVNav": "Mission and Vision",
+  "joinUsNav": "Join Us",
+  "projectsNav": "Projects",
+  "newsNav": "News",
+  "contactUsNav": "Contact Us"
 }
