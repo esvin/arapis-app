@@ -27,8 +27,8 @@ const About: NextPage = () => {
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
         ARAPIS nació de la necesidad de los pequeños apicultores del Suroccidente por buscar mercados para obtener mejores precios en la venta de miel.
-        La conforman apicultores de diversas comunidades, a los cuales se les brinda capacitaciones en diversos temas como: Buenas Prácticas Apícolas, trazabilidad, valor agregado a sus productos, comercialización, entre otros.
         Fue fundada en 2015, enfocando sus esfuerzos en fortalecer y mejorar las condiciones y calidad de vida de sus asociados.
+        La conforman apicultores de diversas comunidades, a los cuales se les brinda capacitaciones como: Buenas Prácticas Apícolas, trazabilidad, calidad, comercialización, entre otros.
       </Typography>
       <Grid container spacing={2} justifyContent="center" alignItems="center" >
         <Grid xs={8} sx={{ display: 'flex' }}>
@@ -68,7 +68,7 @@ const About: NextPage = () => {
         </Grid>
       </Grid>
       <Typography variant="h4" component="h1" gutterBottom>
-        Junta Directiva
+      {t('boardOfDirectorsNav')}
       </Typography>
       <Typography variant="h5" component="h1" gutterBottom>
         Periodo 2021 - 2026
@@ -201,6 +201,9 @@ const About: NextPage = () => {
           </Card>
         </Grid>
       </Grid>
+      <Typography variant="h4" component="h1" gutterBottom>
+        {t('ourAssocNav')}
+      </Typography>
     </Box>
   );
 };
