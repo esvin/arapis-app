@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto3.jpg" alt="" />
+              <img src="/foto3.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
             </a>
@@ -68,14 +68,14 @@ const Home: NextPage = () => {
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto10.jpg" alt="" />
+              <img src="/foto10.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
             </a>
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto11.jpg" alt="" />
+              <img src="/foto11.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
             </a>
