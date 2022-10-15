@@ -53,7 +53,7 @@ const MyApp = (props: MyAppProps) => {
             }}
           >
             <Toolbar />
-            <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
+            <Container maxWidth={false} disableGutters sx={{ mt: 4, mb: 4 }}>
               <Component {...pageProps} />
             </Container>
           </Box>
