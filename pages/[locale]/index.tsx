@@ -26,13 +26,6 @@ const Home: NextPage = () => {
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto2.jpg" alt="" />
-              <h1>This is a title</h1>
-              <p>Some sample text about the article this hexagon leads to</p>
-            </a>
-          </li>
-          <li className={styles.hex}>
-            <a className={styles.hexIn} href="#">
               <img src="/foto3.jpg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
@@ -48,13 +41,6 @@ const Home: NextPage = () => {
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
               <img src="/foto5.jpg" alt="" />
-              <h1>This is a title</h1>
-              <p>Some sample text about the article this hexagon leads to</p>
-            </a>
-          </li>
-          <li className={styles.hex}>
-            <a className={styles.hexIn} href="#">
-              <img src="/foto6.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
             </a>
@@ -124,13 +110,6 @@ const Home: NextPage = () => {
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto16.jpeg" alt="" />
-              <h1>This is a title</h1>
-              <p>Some sample text about the article this hexagon leads to</p>
-            </a>
-          </li>
-          <li className={styles.hex}>
-            <a className={styles.hexIn} href="#">
               <img src="/foto17.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
@@ -145,13 +124,6 @@ const Home: NextPage = () => {
           </li>
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
-              <img src="/foto19.jpeg" alt="" />
-              <h1>This is a title</h1>
-              <p>Some sample text about the article this hexagon leads to</p>
-            </a>
-          </li>
-          <li className={styles.hex}>
-            <a className={styles.hexIn} href="#">
               <img src="/foto20.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
@@ -160,13 +132,6 @@ const Home: NextPage = () => {
           <li className={styles.hex}>
             <a className={styles.hexIn} href="#">
               <img src="/foto21.jpeg" alt="" />
-              <h1>This is a title</h1>
-              <p>Some sample text about the article this hexagon leads to</p>
-            </a>
-          </li>
-          <li className={styles.hex}>
-            <a className={styles.hexIn} href="#">
-              <img src="/foto25.jpeg" alt="" />
               <h1>This is a title</h1>
               <p>Some sample text about the article this hexagon leads to</p>
             </a>
