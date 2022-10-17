@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import Container from '@mui/material/Container';
 import CardHeader from '@mui/material/CardHeader';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -44,59 +45,64 @@ const Product: NextPage = () => {
       description: t('toursDes')
     },
   ];
-  return (<Box
-    sx={{
-      my: 4,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}
-  >
-    <Typography variant="h4" component="h1" gutterBottom>
-      {t('servicesTitle')}
-    </Typography>
-    <Grid container spacing={{ xs: 6 }}
-    >
-      <Grid item xs={12} sx={{ textAlign: 'center' }}>
-        <Typography variant="body1" gutterBottom>
-          {t('servicesSubtitle')}
+  return (
+    <Container maxWidth="md">
+      <Box
+        sx={{
+          my: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Typography variant="h4" component="h1" gutterBottom>
+          {t('servicesTitle')}
         </Typography>
-      </Grid>
-
-      {
-        servicesOffered.map((service) =>
-          <Grid
-            item
-            key={service.name}
-            md={6}>
-            <Card sx={{ background: service.color }}>
-              <CardContent>
-                <Stack
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center">
-                  <Avatar color="primary" sx={{ width: 96, height: 96, bgcolor: (theme) => theme.palette.secondary.main }}>
-                    {service.icon}
-                  </Avatar>
-                  <Typography 
-                    variant="h5" 
-                    gutterBottom 
-                    color="text.primary" 
-                    sx={{ ml: 2, mt:2, fontWeight: 'bold', textAlign: 'center !important' }}>
-                    {service.name}
-                  </Typography>
-                  <Typography variant="body1" gutterBottom color="text.primary" sx={{ ml: 2, textAlign: 'center !important' }}>
-                    {service.description}
-                  </Typography>
-                </Stack>
-              </CardContent>
-              <CardActions></CardActions>
-            </Card>
+        <Grid container spacing={{ xs: 6 }}
+        >
+          <Grid item xs={12} sx={{ textAlign: 'center' }}>
+            <Typography variant="body1" gutterBottom>
+              {t('servicesSubtitle')}
+            </Typography>
           </Grid>
-        )
-      }   </Grid>
-  </Box>);
+
+          {
+            servicesOffered.map((service) =>
+              <Grid
+                item
+                key={service.name}
+                md={6}>
+                <Card sx={{ background: service.color }}>
+                  <CardContent>
+                    <Stack
+                      direction="column"
+                      justifyContent="center"
+                      alignItems="center">
+                      <Avatar color="primary" sx={{ width: 96, height: 96, bgcolor: (theme) => theme.palette.secondary.main }}>
+                        {service.icon}
+                      </Avatar>
+                      <Typography
+                        variant="h5"
+                        gutterBottom
+                        color="text.primary"
+                        sx={{ ml: 2, mt: 2, fontWeight: 'bold', textAlign: 'center !important' }}>
+                        {service.name}
+                      </Typography>
+                      <Typography variant="body1" gutterBottom color="text.primary" sx={{ ml: 2, textAlign: 'center !important' }}>
+                        {service.description}
+                      </Typography>
+                    </Stack>
+                  </CardContent>
+                  <CardActions></CardActions>
+                </Card>
+              </Grid>
+            )
+          }
+        </Grid>
+      </Box>
+    </Container>
+  );
 }
 
 

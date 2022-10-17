@@ -13,6 +13,20 @@
   display: block;
   clear: both;
 }
+.cardMed{
+  height: 600px;
+}
+.webTitle {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .hex {
   position: relative;
@@ -124,6 +138,12 @@
   .hex:nth-child(5n+6) {
     clear: left;
   }
+  .webTitle {
+    font-size: 42px;
+  }
+  .webTitle {
+    font-size: 58px;
+  }
 }
 
 @media (max-width: 1200px) {  /* <- 1-2  hexagons per row */
@@ -149,11 +169,34 @@
   .hex:nth-child(3n+4) {
     clear: left;
   }
+  .webTitle {
+    font-size: 42px;
+  }
+}
+@media (max-width: 900px) {
+  .cardMed{
+    height: 400px;
+  }
+  .webTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardMed{
+    height: 300px;
+  }
+  .webTitle {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 400px) {
   #hexGrid {
     font-size: 13px;
+  }
+  .webTitle {
+    font-size: 16px;
   }
 }
 
