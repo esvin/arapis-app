@@ -28,9 +28,7 @@ const About: NextPage = () => {
           {t('ourStoryTitle')}
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
-          ARAPIS nació de la necesidad de los pequeños apicultores del Suroccidente por buscar mercados para obtener mejores precios en la venta de miel.
-          Fue fundada en 2015, enfocando sus esfuerzos en fortalecer y mejorar las condiciones y calidad de vida de sus asociados.
-          La conforman apicultores de diversas comunidades, a los cuales se les brinda capacitaciones como: Buenas Prácticas Apícolas, trazabilidad, calidad, comercialización, entre otros.
+          {t('ourStoryMain')}
         </Typography>
         <Grid container spacing={2} justifyContent="center" alignItems="center" >
           <Grid xs={8} sx={{ display: 'flex' }}>
@@ -38,12 +36,12 @@ const About: NextPage = () => {
           </Grid>
           <Grid xs={4}>
             <Typography variant="subtitle1" gutterBottom>
-              ARAPIS posee la infraestructura adecuada para la implementacion de buenas prácticas de manufactura, en el 2018 fue autorizada por el Ministerio de Agricultura Ganadería y Alimentación (VISAR MAGA).
+              {t('ourStoryMaga')}
             </Typography>
           </Grid>
           <Grid xs={4}>
             <Typography variant="subtitle1" gutterBottom>
-              La participación de las mujeres asociadas es importante para la creación y procesamiento de productos con valor agregado con el objetivo de incrementar los ingresos en los hogares y ofrecer productos que aporten beneficios para la salud de los consumidores.
+              {t('ourStoryWomen')}
             </Typography>
           </Grid>
           <Grid xs={8} sx={{ display: 'flex' }}>
@@ -54,13 +52,12 @@ const About: NextPage = () => {
           </Grid>
           <Grid xs={4}>
             <Typography variant="subtitle1" gutterBottom>
-              ARAPIS mantiene participación activa en eventos de comercialización, dando a conocer sus productos como: miel multiflora, miel de montaña, miel de bosque.
-              ARAPIS es parte de la agrocadena apícola en Guatemala, en todos los eslabones (producción, acopio, transformación, comercialización y exportación).
+              {t('ourStoryParticipation')}            
             </Typography>
           </Grid>
           <Grid xs={4}>
             <Typography variant="subtitle1" gutterBottom>
-              ARAPIS formo parte del Proyecto Paisajes Productivos Resilientes al Cambio Climático y Redes Socioeconómicas fortalecidas en Guatemala, con el cual se logró la construcción del Centro Regional de Acopio de Miel.
+            {t('ourStoryMarn')}    
             </Typography>
           </Grid>
           <Grid xs={8} sx={{ display: 'flex' }}>
@@ -71,7 +68,7 @@ const About: NextPage = () => {
           {t('boardOfDirectorsNav')}
         </Typography>
         <Typography variant="h5" component="h1" gutterBottom>
-          Periodo 2021 - 2026
+        {t('bODPeriod')}
         </Typography>
         <Grid container spacing={{ xs: 1, md: 2 }}>
           <Grid xs={5} sm={4}>
@@ -88,7 +85,7 @@ const About: NextPage = () => {
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
                     <Typography gutterBottom variant="body1">
-                      Presidente
+                      {t('bODPresident')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -109,7 +106,7 @@ const About: NextPage = () => {
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
                     <Typography gutterBottom variant="body1">
-                      Vice-Presidente
+                      {t('bODVicePresident')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -129,8 +126,8 @@ const About: NextPage = () => {
                     </Typography>
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
-                    <Typography gutterBottom variant="body1">
-                      Secretario
+                    <Typography gutterBottom variant="body1"> 
+                      {t('bODSecretary')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -151,7 +148,7 @@ const About: NextPage = () => {
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
                     <Typography gutterBottom variant="body1">
-                      Tesorero
+                      {t('bODTresurer')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -172,7 +169,7 @@ const About: NextPage = () => {
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
                     <Typography gutterBottom variant="body1">
-                      Vocal I
+                      {t('bODVocal1')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -193,7 +190,7 @@ const About: NextPage = () => {
                   </Grid>
                   <Grid sx={{ paddingTop: 0 }}>
                     <Typography gutterBottom variant="body1">
-                      Vocal II
+                      {t('bODVocal2')}
                     </Typography>
                   </Grid>
                 </Grid>
