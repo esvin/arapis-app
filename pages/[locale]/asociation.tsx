@@ -59,12 +59,12 @@ const About: NextPage = () => {
             </Grid>
             <Grid>
               <Typography variant="h4" component="h1" gutterBottom>
-                Misión
+                {t('missionSub')}
               </Typography>
             </Grid>
             <Grid>
               <Typography variant="subtitle1" gutterBottom align='center'>
-                Fortalecer a los apicultores implementando estrategias para elevar la calidad de la producción y comercialización, para el desarrollo económico, social y cultural, contribuyendo con la protección del medio ambiente y los recursos naturales, transmitiendo este compromiso a la sociedad en general.
+                {t('missionDes')}
               </Typography>
             </Grid>
           </Grid>
@@ -74,12 +74,12 @@ const About: NextPage = () => {
             </Grid>
             <Grid>
               <Typography variant="h4" component="h1" gutterBottom>
-                Visión
+                {t('visionSub')}
               </Typography>
             </Grid>
             <Grid>
               <Typography variant="subtitle1" gutterBottom align='center'>
-                Ser una organización que facilite a sus asociados y proveedores, los vínculos estratégicos para la realización de actividades apícolas a nivel nacional e internacional.
+                {t('visionDes')}
               </Typography>
             </Grid>
           </Grid>
@@ -108,12 +108,12 @@ const About: NextPage = () => {
             </Grid>
             <Grid>
               <Typography variant="h4" component="h1" gutterBottom>
-                Objetivo
+                {t('objectiveSub')}
               </Typography>
             </Grid>
             <Grid>
               <Typography variant="subtitle1" gutterBottom align='center'>
-                Contribuir al desarrollo integral y al mejoramiento de la calidad de vida de sus asociados y familias, así también la gestión de proyectos y adquisición de financiamiento destinado a satisfacer las necesidades de la asociación.
+                {t('objectiveDes')}
               </Typography>
             </Grid>
           </Grid>
@@ -123,21 +123,21 @@ const About: NextPage = () => {
             </Grid>
             <Grid>
               <Typography variant="h4" component="h1" gutterBottom>
-                Valores
+                {t('valuesSub')}
               </Typography>
             </Grid>
             <Grid>
               <Typography variant="subtitle1" gutterBottom align='center'>
-                Contribuye a la motivación de los apicultores de mantenerse en la apicultura, porque las abejas además de dar sus productos, polinizan en un 95% de todo tipo de cultivos y de plantas.  ¡Sin abejas el reino animal y vegetal no sobrevive!
+                {t('valuesDes')}
               </Typography>
             </Grid>
           </Grid>
         </Stack>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Hazte Socio
+        <Typography variant="h4" component="h1" gutterBottom sx={{mt: 4}}>
+          {t('joinUsNav')}
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Si eres Apicultor, Forma parte de nuestra asociación de Apicultores, donde podras obtener los siguientes beneficios:
+        <Typography variant="subtitle1" gutterBottom sx={{mb: 2, textAlign: "center"}}>
+          {t('joinUsDes')}
         </Typography>
         <Grid container spacing={2} xs={12}>
           <Grid xs={6}>
@@ -150,7 +150,7 @@ const About: NextPage = () => {
               >
                 <Avatar src="/beekeeper_boy.png" alt="Foto Miembro Junta Directiva" sx={{ width: 42, height: 42 }} />
                 <Typography variant="subtitle1" gutterBottom align='center'>
-                  Capacitación y Asistencia Técnica
+                  {t('trainingDes')}
                 </Typography>
               </Stack>
             </Item>
@@ -165,7 +165,7 @@ const About: NextPage = () => {
               >
                 <Avatar src="/honey.png" alt="Foto Miembro Junta Directiva" sx={{ width: 42, height: 42 }} />
                 <Typography variant="subtitle1" gutterBottom align='center'>
-                  Acopio de Miel
+                  {t('collectionDes')}
                 </Typography>
               </Stack>
             </Item>
@@ -180,7 +180,7 @@ const About: NextPage = () => {
               >
                 <Avatar src="/smoker.png" alt="Foto Miembro Junta Directiva" sx={{ width: 42, height: 42 }} />
                 <Typography variant="subtitle1" gutterBottom align='center'>
-                  Insumos y Equipo de Trabajo
+                  {t('toolDes')}
                 </Typography>
               </Stack>
             </Item>
@@ -195,7 +195,7 @@ const About: NextPage = () => {
               >
                 <Avatar src="/colmena.png" alt="Foto Miembro Junta Directiva" sx={{ width: 42, height: 42 }} />
                 <Typography variant="subtitle1" gutterBottom align='center'>
-                  Proyectos de Apoyo
+                  {t('projectsDes')}
                 </Typography>
               </Stack>
             </Item>

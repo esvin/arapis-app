@@ -75,114 +75,109 @@ const Home: NextPage = () => {
       </Carousel>
       <Container maxWidth="md">
         <Box>
-          <Typography variant="h5" gutterBottom sx={{ mt: 4, mb: 4, textAlign: "center"}}>
+          <Typography variant="h5" gutterBottom sx={{ mt: 4, mb: 4, textAlign: "center" }}>
             {t('homeDes')}
+          </Typography>
+          <Typography variant="h3" component="h1" gutterBottom sx={{ mt: 4, mb: 4, color: '#714300', fontWeight: 'bold', textAlign: "center" }}>
+            {t('honeyCombTitle')}
           </Typography>
           <ul id="hexGrid">
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto1.jpeg" alt="" />
-                <h1>Comercialización</h1>
-                <p>Productos derivados de la colmena como: Miel, Polen, Propoleo.</p>
+                <h1>{t('honeyCombT1')}</h1>
+                <p>{t('honeyCombD1')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto2.jpeg" alt="" />
-                <h1>Distintas Mieles</h1>
-                <p>Mieles de diferentes regiones del pais con distinta flora.</p>
+                <h1>{t('honeyCombT2')}</h1>
+                <p>{t('honeyCombD2')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto3.jpe" alt="" />
-                <h1>Asistencia Tecnica</h1>
-                <p>Apoyo tecnico cosntante a nuestros asociados en sus apiarios.</p>
+                <h1>{t('honeyCombT3')}</h1>
+                <p>{t('honeyCombD3')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto4.jpeg" alt="" />
-                <h1>Apicultor</h1>
-                <p>En nuestra organización el bienestar del apicultor es primero.</p>
+                <h1>{t('honeyCombT4')}</h1>
+                <p>{t('honeyCombD4')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto5.jpe" alt="" />
-                <h1>Apiarios saludables</h1>
-                <p>Nuestro monitoreo y control de apiarios es permanente.</p>
+                <h1>{t('honeyCombT5')}</h1>
+                <p>{t('honeyCombD5')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto6.jpeg" alt="" />
-                <h1>Calidad</h1>
-                <p>Nuestra produccion apicola, sigue estandares de calidad.</p>
+                <h1>{t('honeyCombT6')}</h1>
+                <p>{t('honeyCombD6')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto7.jpeg" alt="" />
-                <h1>Mujeres apicultoras</h1>
-                <p>Nuestras asociadas forman parte primordial en nuestra operacion.</p>
-              </a>
-            </li>
-            <li className={styles.hex}>
-              <a className={styles.hexIn} href="#">
-                <img src="/foto8.jpeg" alt="" />
-                <h1>Meliponas</h1>
-                <p>Diversificacion de mieles y abejas</p>
+                <h1>{t('honeyCombT7')}</h1>
+                <p>{t('honeyCombD7')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto9.jpeg" alt="" />
-                <h1>Organica 100% Natural</h1>
-                <p>Nuestra miel es organica y 100% Natural</p>
+                <h1>{t('honeyCombT8')}</h1>
+                <p>{t('honeyCombD8')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto10.jpeg" alt="" />
-                <h1>Cumplimiento</h1>
-                <p>Nuestros productos cumplen con los permisos y requerimientos institucionales. </p>
+                <h1>{t('honeyCombT9')}</h1>
+                <p>{t('honeyCombD9')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto11.jpe" alt="" />
-                <h1>Regiones</h1>
-                <p>Nuestra miel y asociados son originarios de distintas regiones y climas.</p>
+                <h1>{t('honeyCombT10')}</h1>
+                <p>{t('honeyCombD10')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto12.jpeg" alt="" />
-                <h1>Aprendizaje</h1>
-                <p>En nuestra organización aprendemos todos.</p>
-              </a>
-            </li>
-            <li className={styles.hex}>
-              <a className={styles.hexIn} href="#">
-                <img src="/foto13.jpeg" alt="" />
-                <h1>Trabajo en equipo</h1>
-                <p>La mayoria de nuestras actividades y proyectos se realizan en equipo y buscando el beneficio de todos.</p>
+                <h1>{t('honeyCombT11')}</h1>
+                <p>{t('honeyCombD11')}</p>
               </a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto14.jpg" alt="" />
-                <h1>Buenas practicas</h1>
-                <p>Nuestros asociados y asociadas realizan buenas practicas productivas y de acopio de la miel.</p>
+                <h1>{t('honeyCombT12')}</h1>
+                <p>{t('honeyCombD12')}</p>
               </a>
+            </li>
+            <li className={styles.hex}>
+              <a className={styles.hexIn}></a>
             </li>
             <li className={styles.hex}>
               <a className={styles.hexIn} href="#">
                 <img src="/foto15.jpeg" alt="" />
-                <h1>Nuestra marca</h1>
-                <p>Nuestra marca De la cuenca, es reconocida como producto de buen sabor y calidad.</p>
+                <h1>{t('honeyCombT13')}</h1>
+                <p>{t('honeyCombD13')}</p>
               </a>
+            </li>
+            <li className={styles.hex}>
+              <a className={styles.hexIn}></a>
             </li>
           </ul>
         </Box>

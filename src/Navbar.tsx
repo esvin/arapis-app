@@ -20,8 +20,7 @@ import { useRouter } from 'next/router';
 import LanSwitchLink from '../src/LanSwitchLink';
 import i18nextConfig from '../next-i18next.config';
 import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { getStaticPaths, makeStaticProps } from '../lib/getStatic';
+import styles from './Navbar.module.css';
 
 
 const Navbar = () => {
@@ -196,8 +195,9 @@ const Navbar = () => {
             </Drawer>
           </Box>
           {
-            <Link href="/" >
-              <img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="72" style={{ cursor: 'pointer!important;'}}/>
+            <Link href="/">
+              <img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="72" 
+            className={styles.logoNav}/>
             </Link>
           }
           <Box sx={{ flexGrow: 1, paddingLeft: 4, display: { xs: 'none', md: 'flex' } }}>
