@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Avatar, Button } from '@mui/material';
 
 const LanSwitchLink = ({ locale, href }: { locale: string, href?: string }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   let theHref = href || router.asPath
   let pName = router.pathname
@@ -19,6 +19,11 @@ const LanSwitchLink = ({ locale, href }: { locale: string, href?: string }) => {
   if (locale) {
     href = href ? `/${locale}${href}` : pName
   }
+  const  localeClick = () => {
+    languageDetector.cache!(locale);
+    const actualPath = location.pathname.split('/')[2];
+    router.push(actualPath ? ('/' + actualPath): '/' , undefined, { shallow: true }); 
+  };
 
   return (
     <Link
@@ -29,7 +34,7 @@ const LanSwitchLink = ({ locale, href }: { locale: string, href?: string }) => {
           color="secondary"
           startIcon={<Avatar src="/gt.png" />}
           sx={{ paddingTop: '15px'}}
-          onClick={() => { languageDetector.cache!(locale); router.push('/', undefined, { shallow: true }); }} 
+          onClick={localeClick} 
         ></Button>
         }
         {locale === 'es' && <Button
@@ -37,7 +42,7 @@ const LanSwitchLink = ({ locale, href }: { locale: string, href?: string }) => {
           color="secondary"
           startIcon={<Avatar src="/usa.png"  />}
           sx={{ paddingTop: '15px'}}
-          onClick={() => { languageDetector.cache!(locale); router.push('/', undefined, { shallow: true }); }} 
+          onClick={localeClick} 
         ></Button>
         }
       </div>

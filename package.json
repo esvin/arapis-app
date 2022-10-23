@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
@@ -19,6 +20,7 @@
     "next": "latest",
     "next-i18next": "^12.1.0",
     "next-language-detector": "^1.0.2",
+    "next-sitemap": "^3.1.29",
     "react": "latest",
     "react-dom": "latest",
     "react-gtm-module": "^2.0.11",

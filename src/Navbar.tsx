@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import LanSwitchLink from '../src/LanSwitchLink';
 import i18nextConfig from '../next-i18next.config';
@@ -95,7 +96,7 @@ const Navbar = () => {
                     <img src="/logogrande.png" height="65" alt="" />
                   </ListItemButton>
                   <ListItemButton onClick={() => setOpenAbout(!openAbout)}>
-                    <ListItemText primary={t('aboutUsNav')}/>
+                    <ListItemText primary={t('aboutUsNav')} />
                     {openAbout ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
                   <Collapse in={openAbout} timeout="auto" unmountOnExit>
@@ -130,21 +131,21 @@ const Navbar = () => {
                   <Collapse in={openOurHoney} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                       <ListItemButton sx={{ pl: 4 }} onClick={() => {
-                          router.push('/product', undefined, { shallow: true });
-                          handleCloseMenu();
-                        }}>
+                        router.push('/product', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary={t('productsNav')} />
                       </ListItemButton>
                       <ListItemButton sx={{ pl: 4 }} onClick={() => {
-                          router.push('/product', undefined, { shallow: true });
-                          handleCloseMenu();
-                        }}>
+                        router.push('/product', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary={t('servicesNav')} />
                       </ListItemButton>
-                      <ListItemButton sx={{ pl: 4 }}  onClick={() => {
-                          router.push('/product', undefined, { shallow: true });
-                          handleCloseMenu();
-                        }}>
+                      <ListItemButton sx={{ pl: 4 }} onClick={() => {
+                        router.push('/product', undefined, { shallow: true });
+                        handleCloseMenu();
+                      }}>
                         <ListItemText primary={t('qualityNav')} />
                       </ListItemButton>
                     </List>
@@ -179,22 +180,26 @@ const Navbar = () => {
                     </List>
                   </Collapse>
                   <ListItemButton sx={{ pl: 4 }} onClick={() => {
-                          router.push('/blog', undefined, { shallow: true });
-                          handleCloseMenu();
-                        }}>
+                    router.push('/blog', undefined, { shallow: true });
+                    handleCloseMenu();
+                  }}>
                     <ListItemText primary={t('newsNav')} />
                   </ListItemButton>
                   <ListItemButton sx={{ pl: 4 }} onClick={() => {
-                          router.push('/contact', undefined, { shallow: true });
-                          handleCloseMenu();
-                        }}>
+                    router.push('/contact', undefined, { shallow: true });
+                    handleCloseMenu();
+                  }}>
                     <ListItemText primary={t('contactUsNav')} />
                   </ListItemButton>
                 </List>
               </Box>
             </Drawer>
           </Box>
-          {<img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="72" />}
+          {
+            <Link href="/" >
+              <img src="/logocolor.png" alt="ARAPIS Logo" height="64" width="72" style={{ cursor: 'pointer!important;'}}/>
+            </Link>
+          }
           <Box sx={{ flexGrow: 1, paddingLeft: 4, display: { xs: 'none', md: 'flex' } }}>
             <Button
               onClick={handleAboutNav}
@@ -212,7 +217,7 @@ const Navbar = () => {
               onClick={handleAssociationNav}
               sx={{ my: 2, color: '#000000', display: 'block' }}
             >
-            {t('asociationNav')}
+              {t('asociationNav')}
             </Button>
             <Button
               sx={{ my: 2, color: '#000000', display: 'block' }}
@@ -221,7 +226,7 @@ const Navbar = () => {
                 handleCloseMenu();
               }}
             >
-            {t('newsNav')}
+              {t('newsNav')}
             </Button>
             <Button
               sx={{ my: 2, color: '#000000', display: 'block' }}
@@ -230,7 +235,7 @@ const Navbar = () => {
                 handleCloseMenu();
               }}
             >
-            {t('contactUsNav')}
+              {t('contactUsNav')}
             </Button>
             {i18nextConfig.i18n.locales.map((locale) => {
               if (locale === currentLocale) return null
