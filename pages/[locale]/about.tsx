@@ -15,6 +15,11 @@ const About: NextPage = () => {
   const { t } = useTranslation('common');
   return (
     <Container maxWidth="md">
+      <link
+          rel="canonical"
+          href="https://arapis.com.gt/es/about"
+          key="canonical"
+        />
       <Box
         sx={{
           my: 4,

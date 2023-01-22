@@ -23,6 +23,11 @@ const Home: NextPage = () => {
         alignItems: 'center',
       }}
     >
+      <link
+          rel="canonical"
+          href="https://arapis.com.gt/es"
+          key="canonical"
+        />
       <Carousel>
         <Card sx={{ width: '100%' }}>
           <CardMedia

@@ -47,6 +47,11 @@ const Product: NextPage = () => {
   ];
   return (
     <Container maxWidth="md">
+      <link
+          rel="canonical"
+          href="https://arapis.com.gt/es/product"
+          key="canonical"
+        />
       <Box
         sx={{
           my: 4,

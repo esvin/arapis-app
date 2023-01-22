@@ -24,6 +24,11 @@ const About: NextPage = () => {
 
   return (
     <Container maxWidth="md">
+      <link
+          rel="canonical"
+          href="https://arapis.com.gt/es/asociation"
+          key="canonical"
+        />
       <Box
         sx={{
           my: 4,
