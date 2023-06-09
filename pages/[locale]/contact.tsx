@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
+import MapGoogle from '../../components/MapGoogle';
 
 const Contact: NextPage = () => {
 
-  return (<>Contact Us</>);
+  return (<MapGoogle/>);
 }
 
 const getStaticProps = makeStaticProps(['common']);

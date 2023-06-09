@@ -17,6 +17,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@react-google-maps/api": "^2.18.1",
     "next": "latest",
     "next-i18next": "^12.1.0",
     "next-language-detector": "^1.0.2",
@@ -27,6 +28,7 @@
     "react-material-ui-carousel": "^3.4.2"
   },
   "devDependencies": {
+    "@types/google.maps": "^3.53.4",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-gtm-module": "^2.0.1",
