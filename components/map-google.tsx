@@ -1,7 +1,7 @@
 import { useLoadScript, GoogleMap, MarkerF } from '@react-google-maps/api';
 import type { NextPage } from 'next';
 import { useMemo } from 'react';
-import styles from './MapGoogle.module.css';
+import styles from './map-google.module.css';
 
 const MapGoogle: NextPage = () => {
   const libraries = useMemo(() => ['places'], []);
