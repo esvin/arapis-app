@@ -37,13 +37,13 @@ const Contact: NextPage = () => {
           <Card sx={{ minWidth: 275 }}>
             <CardContent sx={{ paddingBottom: 0 }}>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                Dirección
+              {t('contactUsDir')}
               </Typography>
               <Typography variant="subtitle2" gutterBottom>
                 KM. 150 CA-2 Carretera al Pacifico, Aldea Concepción Ixtacapa, San Antonio Suchitepéquez, Guatemala.
               </Typography>
               <Typography sx={{ mb: 0.5 }} color="text.secondary">
-                Telefonos de Contacto
+                {t('contactUsPhone')}
               </Typography>
               <Typography variant="body2">
                 <IconButton
