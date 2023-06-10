@@ -37,7 +37,7 @@ const MapGoogle: NextPage = () => {
         zoom={13}
         center={mapCenter}
         mapTypeId={google.maps.MapTypeId.ROADMAP}
-        mapContainerStyle={{ width: '100%', height: '500px' }}
+        mapContainerStyle={{ width: '100%', height: '400px' }}
         onLoad={() => console.log('Map Component Loaded...')}
 
       >
