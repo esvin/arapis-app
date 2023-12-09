@@ -81,7 +81,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembro Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/presidente-arapis.jpeg" alt="Foto Miembro Junta Directiva" sx={{ width: 96, height: 96 }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
@@ -102,7 +102,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembre Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/vicepresidenta-arapis.jpeg" alt="Foto Miembre Junta Directiva" sx={{ width: 96, height: 96  }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
@@ -123,7 +123,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembro Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/secretario-arapis.jpeg" alt="Foto Miembro Junta Directiva" sx={{ width: 96, height: 96 }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
@@ -144,7 +144,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembro Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/tesorero-arapis.jpeg" alt="Foto Miembro Junta Directiva" sx={{ width: 96, height: 96 }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
@@ -165,7 +165,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembro Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/vocal1-arapis.jpeg" alt="Foto Miembro Junta Directiva" sx={{ width: 96, height: 96 }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
@@ -186,7 +186,7 @@ const About: NextPage = () => {
               <CardContent>
                 <Grid container spacing={1} justifyContent="center" alignItems="center" direction="column">
                   <Grid>
-                    <Avatar src="" alt="Foto Miembro Junta Directiva" sx={{ width: 64, height: 64 }} />
+                    <Avatar src="/vocal2-arapis.jpeg" alt="Foto Miembro Junta Directiva" sx={{ width: 96, height: 96 }} />
                   </Grid>
                   <Grid>
                     <Typography gutterBottom variant="h6" component="div" sx={{ marginBottom: 0 }}>
